@@ -19,7 +19,7 @@ public class OriginalMovementScript : MonoBehaviour
     void Update()
     {
         float horizValue = Input.GetAxis("Horizontal");
-        rb2.velocity = new Vector2(horizValue * 2, rb2.velocity.y);
+        rb2.velocity = new Vector2(horizValue * 3, rb2.velocity.y);
 
         if (horizValue > 0)
         {
@@ -33,7 +33,7 @@ public class OriginalMovementScript : MonoBehaviour
         grounded = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.1f), 0, Vector2.down, 1, LayerMask.GetMask("Ground"));
         if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
-            rb2.velocity = new Vector2(rb2.velocity.x, 6);
+            rb2.velocity = new Vector2(rb2.velocity.x, 14);
         }
     }
 }
