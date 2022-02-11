@@ -23,11 +23,11 @@ public class OriginalMovementScript : MonoBehaviour
 
         if (horizValue > 0)
         {
-            sr.flipX = true;
-        }
-        else
-        {
             sr.flipX = false;
+        }
+        if (horizValue < 0)
+        {
+            sr.flipX = true;
         }
 
         grounded = Physics2D.BoxCast(transform.position, new Vector2(0.1f, 0.1f), 0, Vector2.down, 1, LayerMask.GetMask("Ground"));
