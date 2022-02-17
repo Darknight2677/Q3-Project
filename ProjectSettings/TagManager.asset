@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerCollider
+  - Enemy
+  - Door1
+  - Door2
+  - Door3
   layers:
   - Default
   - TransparentFX
