@@ -26,7 +26,6 @@ public class OriginalMovementScript : MonoBehaviour
         a.SetFloat("yVelocity", rb2.velocity.y);
         a.SetBool("grounded", grounded);
 
-
         if (horizValue > 0)
         {
             sr.flipX = false;
@@ -79,7 +78,12 @@ public class OriginalMovementScript : MonoBehaviour
         //}
         if (collision.gameObject.tag == "Door3")
         {
-            transform.position = new Vector2(0, 2);
+            transform.position = new Vector2(-6.39, 2.015);
+        }
+
+        if (collision.gameObject.tag == "Door4")
+        {
+            transform.position = new Vector2(-12.82, -3.985);
         }
     }
 }
